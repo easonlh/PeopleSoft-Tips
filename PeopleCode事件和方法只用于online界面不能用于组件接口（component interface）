@@ -1,0 +1,59 @@
+在使用CI过程中，哪些方法是不能使用的。以下为PeopleBook解释的内容。
+
+一、搜索框代码不执行：SearchInit, SearchSave, and RowSelect events 意味着使 用CI第一执行的事件是RowInit.
+
+二、菜单的代码和pop-up菜单：ItemSelected PrePopup 不支持，CheckMenuItem, DisableMenuItem, EnableMenuItem, HideMenuItem, and UncheckMenuItem functions 不可用。
+
+三、组建之间的转换：The TransferPage, DoModalPageGroup, and IsModalPageGroup functions 不可用。
+
+四、动态树方法（Dynamic tree controls.）：GetSelectedTreeNode, GetTreeNodeParent, GetTreeRecordName, RefreshTree, and TreeDetailInNode 不可用。
+
+五、ActiveX控件：The PSControlInit and PSLostFocus events , and the GetControl不可用。
+
+六、DoSave()和DoSaveNow():应该使用CI的Save()方法。
+
+七、CI代码不执行的方法汇总：
+
+    WinMessage
+
+    CheckMenuItem
+
+    DisableMenuItem
+
+    EnableMenuItem
+
+    HideMenuItem
+
+    UncheckMenuItem
+
+    SetCursorPos
+
+    TransferPanel
+
+    TransferPage
+
+    DoModalComponent
+
+    IsModalComponent
+
+    DoModalPanelGroup
+
+    IsModalPanelGroup
+
+    GetSelectedTreeNode
+
+    GetTreeNodeParent
+
+    RefreshTree
+
+    TreeDetailInNode
+
+    GetControl
+
+    DoSave
+
+    DoSaveNow
+
+    Gray 
+
+    Ungray
